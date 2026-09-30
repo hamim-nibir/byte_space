@@ -13,7 +13,7 @@ export function Navbar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 text-white">
-      <Container className="grid h-20 grid-cols-2 items-center md:grid-cols-[1fr_auto_1fr]">
+      <Container className="grid h-30 grid-cols-2 items-center md:grid-cols-[1fr_auto_1fr]">
         <Link to="/" aria-label="ByteSpace home" onClick={close}>
           <Logo />
         </Link>
