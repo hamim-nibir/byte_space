@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   align?: 'center' | 'left'
   tone?: 'dark' | 'light'
   className?: string
+  descriptionClassName?: string
 }
 
 export function SectionHeading({
@@ -17,6 +18,7 @@ export function SectionHeading({
   align = 'center',
   tone = 'dark',
   className,
+  descriptionClassName,
 }: SectionHeadingProps) {
   const isLight = tone === 'light'
 
@@ -32,7 +34,15 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className={cn('mt-4 text-base', isLight ? 'text-white/90' : 'text-muted')}>{description}</p>
+        <p
+          className={cn(
+            'mt-4 text-base',
+            isLight ? 'text-white/90' : 'text-muted',
+            descriptionClassName,
+          )}
+        >
+          {description}
+        </p>
       )}
     </div>
   )
