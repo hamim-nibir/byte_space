@@ -37,7 +37,7 @@ export function CoursesSection() {
         />
 
         {visibleCourses.length > 0 ? (
-          <ul className="mx-auto mt-12 grid max-w-[1200px] gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+          <ul className="mx-auto mt-12 grid max-w-[1200px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             {visibleCourses.map((course) => (
               <li key={course.id}>
                 <CourseCard course={course} />
