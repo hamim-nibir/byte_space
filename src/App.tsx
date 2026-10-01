@@ -7,6 +7,7 @@ import { ManageSection } from './components/sections/ManageSection'
 import { GrowthSection } from './components/sections/GrowthSection'
 import { CreatorCtaSection } from './components/sections/CreatorCtaSection'
 import { TestimonialsSection } from './components/sections/TestimonialsSection'
+import { Footer } from './components/ui/Footer'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         </div>
         <CreatorCtaSection />
         <TestimonialsSection />
+        <Footer />
       </main>
     </>
   )
