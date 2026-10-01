@@ -1,7 +1,6 @@
-import { AvatarStack } from '@/components/ui/AvatarStack'
 import { FloatingCard } from '@/components/ui/FloatingCard'
-import { avatars } from '@/data/avatars'
-import starIcon from '@/assets/icons/star.svg'
+import { HappyStudentsCard } from '@/components/ui/HappyStudentsCard'
+import { ProgressCard } from '@/components/ui/ProgressCard'
 
 export function HeroFloatingCards() {
   return (
@@ -11,34 +10,13 @@ export function HeroFloatingCards() {
         <p className="mt-1 text-[10px] text-muted">200 Courses · 1000+ Students</p>
       </FloatingCard>
 
-      <FloatingCard className="absolute left-[122px] top-[650px] w-[230px]">
-        <p className="text-xs">Learning Progress</p>
-        <p className="mt-1 text-4xl font-semibold">55%</p>
-        <div
-          role="progressbar"
-          aria-label="Learning progress"
-          aria-valuenow={55}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          className="mt-2 h-1.5 rounded-full bg-surface"
-        >
-          <div className="h-full w-[55%] rounded-full bg-accent" />
-        </div>
-      </FloatingCard>
+      <ProgressCard
+        label="Learning Progress"
+        value={55}
+        className="absolute left-[122px] top-[650px] w-[230px]"
+      />
 
-      <FloatingCard className="absolute -left-[392px] top-[835px] w-[255px]">
-        <p className="text-sm font-medium">Happy Students</p>
-        <p className="flex items-center gap-1 text-xs">
-          4.5 <span className="text-muted">(240)</span>
-          <img src={starIcon} alt="" className="size-3" />
-        </p>
-        <AvatarStack
-          avatars={avatars}
-          extra="2K+"
-          className="mt-2"
-          extraClassName="bg-accent text-ink"
-        />
-      </FloatingCard>
+      <HappyStudentsCard className="absolute -left-[392px] top-[835px] w-[255px]" />
     </div>
   )
 }

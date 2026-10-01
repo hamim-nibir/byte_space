@@ -28,6 +28,23 @@
   background-position: center top;
 }
 
+@utility bg-soft {
+  background-color: #f9f9f9;
+  background-image:
+    radial-gradient(ellipse 40% 30% at 30% 0%, rgb(212 255 26 / 0.35), transparent),
+    radial-gradient(ellipse 35% 25% at 100% 8%, rgb(0 56 224 / 0.12), transparent),
+    radial-gradient(ellipse 30% 20% at 0% 40%, rgb(0 56 224 / 0.15), transparent),
+    radial-gradient(ellipse 30% 20% at 0% 90%, rgb(212 255 26 / 0.35), transparent),
+    radial-gradient(ellipse 35% 25% at 100% 95%, rgb(0 56 224 / 0.18), transparent);
+}
+
+@utility bg-glow-right {
+  background-color: #f9f9f9;
+  background-image:
+    radial-gradient(ellipse 35% 40% at 62% 25%, rgb(212 255 26 / 0.4), transparent),
+    radial-gradient(ellipse 25% 35% at 100% 40%, rgb(212 255 26 / 0.35), transparent),
+    radial-gradient(ellipse 30% 40% at 0% 90%, rgb(0 56 224 / 0.2), transparent);
+}
 
 
 body {

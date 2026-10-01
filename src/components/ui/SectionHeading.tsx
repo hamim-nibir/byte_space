@@ -4,17 +4,36 @@ import { cn } from '@/lib/cn'
 interface SectionHeadingProps {
   id: string
   title: ReactNode
-  description?: string
+  description?: ReactNode
+  align?: 'center' | 'left'
+  tone?: 'dark' | 'light'
   className?: string
 }
 
-export function SectionHeading({ id, title, description, className }: SectionHeadingProps) {
+export function SectionHeading({
+  id,
+  title,
+  description,
+  align = 'center',
+  tone = 'dark',
+  className,
+}: SectionHeadingProps) {
+  const isLight = tone === 'light'
+
   return (
-    <div className={cn('mx-auto max-w-4xl text-center', className)}>
-      <h2 id={id} className="text-3xl font-semibold leading-tight text-ink sm:text-4xl lg:text-5xl">
+    <div className={cn('max-w-4xl', align === 'center' ? 'mx-auto text-center' : 'text-left', className)}>
+      <h2
+        id={id}
+        className={cn(
+          'text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl',
+          isLight ? 'text-white' : 'text-ink',
+        )}
+      >
         {title}
       </h2>
-      {description && <p className="mt-4 text-base text-muted">{description}</p>}
+      {description && (
+        <p className={cn('mt-4 text-base', isLight ? 'text-white/90' : 'text-muted')}>{description}</p>
+      )}
     </div>
   )
 }
