@@ -2,8 +2,7 @@
 
 A responsive online-learning website built from a Figma design: a full landing page plus login and registration pages.
 
-**Live demo:** `https://byte-space-sandy-ten.vercel.app/`
-**Design:** ByteSpace New (Figma)
+**Live demo:** [ByteSpace](https://byte-space-sandy-ten.vercel.app/)
 
 ## Tech stack
 
