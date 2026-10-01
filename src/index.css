@@ -58,12 +58,22 @@
   background-position: center top;
 }
 
-@utility bg-soft {
+/* @utility bg-soft {
   background-color: #f9f9f9;
   background-image:
     radial-gradient(ellipse 40% 30% at 30% 0%, rgb(212 255 26 / 0.35), transparent),
     radial-gradient(ellipse 35% 25% at 100% 8%, rgb(0 56 224 / 0.12), transparent),
     radial-gradient(ellipse 30% 20% at 0% 40%, rgb(0 56 224 / 0.15), transparent),
+    radial-gradient(ellipse 30% 20% at 0% 90%, rgb(212 255 26 / 0.35), transparent),
+    radial-gradient(ellipse 35% 25% at 100% 95%, rgb(0 56 224 / 0.18), transparent);
+} */
+
+@utility bg-soft {
+  background-color: #f9f9f9;
+  background-image:
+    radial-gradient(ellipse 380px 200px at 28% 90px, rgb(212 251 32 / 0.5), transparent),
+    radial-gradient(ellipse 300px 200px at 100% 60px, rgb(0 56 224 / 0.08), transparent),
+    radial-gradient(ellipse 260px 220px at 0% 680px, rgb(0 56 224 / 0.16), transparent),
     radial-gradient(ellipse 30% 20% at 0% 90%, rgb(212 255 26 / 0.35), transparent),
     radial-gradient(ellipse 35% 25% at 100% 95%, rgb(0 56 224 / 0.18), transparent);
 }

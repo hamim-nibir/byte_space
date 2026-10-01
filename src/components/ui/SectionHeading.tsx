@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   align?: 'center' | 'left'
   tone?: 'dark' | 'light'
   className?: string
+  titleClassName?: string
   descriptionClassName?: string
 }
 
@@ -18,6 +19,7 @@ export function SectionHeading({
   align = 'center',
   tone = 'dark',
   className,
+  titleClassName,
   descriptionClassName,
 }: SectionHeadingProps) {
   const isLight = tone === 'light'
@@ -29,6 +31,7 @@ export function SectionHeading({
         className={cn(
           'text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl',
           isLight ? 'text-white' : 'text-ink',
+          titleClassName,
         )}
       >
         {title}
