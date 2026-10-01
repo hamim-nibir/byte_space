@@ -14,7 +14,7 @@ export function CourseCard({ course }: { course: Course }) {
   const { title, creator, rating, level, price, priceUnit, thumbnail, studentCount } = course
 
   return (
-    <article className="rounded-3xl border border-gray-200 bg-white p-4 transition hover:shadow-lg">
+    <article className="rounded-3xl border border-gray-200 bg-white p-4 text-ink transition hover:shadow-lg">
       {/* Lessons, duration and comments are part of the exported image */}
       <img
         src={thumbnail}

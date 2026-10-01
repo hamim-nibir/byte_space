@@ -1,7 +1,7 @@
 import { AvatarStack } from '@/components/ui/AvatarStack'
 import { FloatingCard } from '@/components/ui/FloatingCard'
 import { avatars } from '@/data/avatars'
-import starIcon from '@/assets/icons/star.svg'
+import starIcon from '@/assets/icons/Star.svg'
 
 export function HappyStudentsCard({ className }: { className?: string }) {
   return (
