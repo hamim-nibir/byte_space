@@ -6,20 +6,21 @@ import ring from '@/assets/images/shapes/ring.png'
 import cone from '@/assets/images/shapes/cone.png'
 import cylinder from '@/assets/images/shapes/cylinder.png'
 
+/* Offsets are measured from the section edges in the 1440px Figma frame. */
 const shapes = [
-  { src: squiggleLarge, tone: 'lime', className: 'left-0 top-[235px] w-[200px]' },
-  { src: squiggleSmall, tone: 'white', className: 'left-[185px] top-[475px] w-[170px]' },
-  { src: ring, tone: 'white', className: 'left-[29px] top-[727px] w-[254px]' },
-  { src: cone, tone: 'white', className: 'right-[153px] top-[466px] w-[185px]' },
-  { src: cylinder, tone: 'lime', className: 'right-0 top-[220px] w-[216px]' },
-  { src: squiggleVertical, tone: 'white', className: 'right-[30px] top-[671px] w-[278px]' },
+  { src: squiggleLarge, tone: 'lime', className: 'left-0 top-[222px] w-[264px]' },
+  { src: squiggleSmall, tone: 'white', className: 'left-[185px] top-[479px] w-[177px]' },
+  { src: ring, tone: 'white', className: 'left-[16px] top-[684px] w-[340px]' },
+  { src: cone, tone: 'white', className: 'right-[145px] top-[466px] w-[188px]' },
+  { src: cylinder, tone: 'lime', className: 'right-0 top-[223px] w-[210px]' },
+  { src: squiggleVertical, tone: 'white', className: '-right-[3px] top-[676px] w-[314px]' },
 ] as const
 
 export function HeroShapes() {
   return (
     <>
-      {shapes.map((s) => (
-        <Shape3D key={s.className} {...s} />
+      {shapes.map((shape, i) => (
+        <Shape3D key={i} {...shape} />
       ))}
     </>
   )

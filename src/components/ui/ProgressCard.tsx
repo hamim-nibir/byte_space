@@ -11,15 +11,15 @@ export function ProgressCard({ label, value, className }: ProgressCardProps) {
 
   return (
     <FloatingCard className={className}>
-      <p className="text-xs">{label}</p>
-      <p className="mt-1 text-4xl font-semibold">{percent}%</p>
+      <p className="text-sm leading-5">{label}</p>
+      <p className="mt-3 text-5xl font-medium leading-none">{percent}%</p>
       <div
         role="progressbar"
         aria-label={label}
         aria-valuenow={percent}
         aria-valuemin={0}
         aria-valuemax={100}
-        className="mt-2 h-1.5 rounded-full bg-surface"
+        className="mt-3 h-2 rounded-full bg-surface"
       >
         <div className="h-full rounded-full bg-accent" style={{ width: `${percent}%` }} />
       </div>

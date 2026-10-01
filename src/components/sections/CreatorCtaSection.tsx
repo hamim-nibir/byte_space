@@ -10,14 +10,18 @@ import ring from '@/assets/images/shapes/ring.png'
 import cone from '@/assets/images/shapes/cone.png'
 import cylinder from '@/assets/images/shapes/cylinder.png'
 
+/*
+ * Offsets are measured from the section edges. Negative values push a shape
+ * past the edge so it is cropped, as in the Figma frame.
+ */
 const shapes = [
-  { src: squiggleLarge, tone: 'lime', className: 'left-0 top-0 w-[170px]' },
-  { src: squiggleSmall, tone: 'white', className: 'left-[205px] top-[25px] w-[135px]' },
-  { src: cone, tone: 'white', className: 'left-0 top-[235px] w-[135px]' },
-  { src: ring, tone: 'lime', className: 'left-[55px] top-[345px] w-[270px]' },
-  { src: cone, tone: 'lime', className: 'right-[200px] top-[10px] w-[145px]' },
-  { src: cylinder, tone: 'white', className: 'right-0 top-[40px] w-[190px]' },
-  { src: squiggleVertical, tone: 'lime', className: 'right-[90px] top-[320px] w-[180px]' },
+  { src: squiggleLarge, tone: 'lime', className: '-top-[55px] left-0 w-[220px]' },
+  { src: squiggleSmall, tone: 'white', className: 'left-[178px] top-[5px] w-[173px]' },
+  { src: cone, tone: 'white', className: '-left-[32px] top-[222px] w-[180px]' },
+  { src: ring, tone: 'lime', className: '-bottom-[163px] left-[15px] w-[344px]' },
+  { src: cone, tone: 'lime', className: 'right-[172px] top-0 w-[190px]' },
+  { src: cylinder, tone: 'white', className: 'right-0 top-[6px] w-[215px]' },
+  { src: squiggleVertical, tone: 'lime', className: '-bottom-[123px] right-[17px] w-[314px]' },
 ] as const
 
 export function CreatorCtaSection() {
@@ -35,6 +39,7 @@ export function CreatorCtaSection() {
           id="creator-cta-heading"
           tone="light"
           className="max-w-5xl"
+          descriptionClassName="mx-auto mt-14 max-w-[960px] leading-7"
           title={
             <>
               Unlock Your Potential as a

@@ -28,7 +28,7 @@ export function NewsletterForm({ className }: { className?: string }) {
 
   return (
     <form noValidate onSubmit={handleSubmit} className={cn('w-full', className)}>
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-6">
         <div className="min-w-0 flex-1">
           <Input
             type="email"
@@ -43,8 +43,8 @@ export function NewsletterForm({ className }: { className?: string }) {
             className="h-[52px] rounded-full px-6 text-base"
           />
         </div>
-        <Button type="submit" className="h-[52px] px-8 text-base">
-          Subscribe
+        <Button type="submit" className="h-[52px] px-6 text-[18px] font-medium leading-[120%]">
+          Search
         </Button>
       </div>
 
