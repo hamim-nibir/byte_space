@@ -1,7 +1,13 @@
-function App() {
+import { Navbar } from '@/components/ui/Navbar'
+import { Hero } from '@/components/sections/Hero'
+
+export default function App() {
   return (
-    <h1 className="text-3xl font-bold text-blue-600">ByteSpace</h1>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+      </main>
+    </>
   )
 }
-
-export default App
