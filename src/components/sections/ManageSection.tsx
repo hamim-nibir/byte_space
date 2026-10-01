@@ -16,7 +16,7 @@ export function ManageSection() {
     >
       <Container className="grid max-w-[1264px] items-center gap-12 lg:grid-cols-2 xl:grid-cols-[621px_1fr] xl:items-start xl:gap-0">
         {/* 540 x 600 box from Figma. Every layer is a percentage of it. */}
-        <div className="relative isolate mx-auto aspect-[540/600] w-full max-w-[540px] xl:mx-0">
+        <div className="relative isolate mx-auto aspect-[540/600] w-full max-w-[540px] @container xl:mx-0">
           <MetricCard
             title="Total Revenue"
             caption="July 1-28"
@@ -29,7 +29,7 @@ export function ManageSection() {
             caption="2023"
             value="$1,200.38"
             badge="+12$"
-            className="absolute left-0 top-[25.5%] z-[5] w-[33.3%]"
+            className="absolute left-0 top-[33%] z-[5] w-[33.3%] @min-[460px]:top-[25.5%]"
           />
 
           <img

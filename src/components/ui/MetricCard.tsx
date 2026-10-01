@@ -9,12 +9,13 @@ interface MetricCardProps {
   className?: string
 }
 
+/* Sized for a parent that is a container (@container): compact below 460px wide. */
 export function MetricCard({ title, caption, value, progress, badge, className }: MetricCardProps) {
   return (
-    <div className={cn('rounded-2xl bg-primary p-4 text-white shadow-xl', className)}>
+    <div className={cn('rounded-2xl bg-primary p-3 text-white shadow-xl @min-[460px]:p-4', className)}>
       <p className="text-sm">{title}</p>
       <p className="text-[10px] text-white/70">{caption}</p>
-      <p className="mt-2 text-xl font-semibold sm:text-2xl">{value}</p>
+      <p className="mt-1 text-base font-semibold @min-[460px]:mt-2 @min-[460px]:text-2xl">{value}</p>
 
       {progress !== undefined && (
         <div
@@ -23,7 +24,7 @@ export function MetricCard({ title, caption, value, progress, badge, className }
           aria-valuenow={progress}
           aria-valuemin={0}
           aria-valuemax={100}
-          className="mt-2 h-1.5 rounded-full bg-white/20"
+          className="mt-1.5 h-1.5 rounded-full bg-white/20 @min-[460px]:mt-2"
         >
           <div
             className="h-full rounded-full bg-accent"

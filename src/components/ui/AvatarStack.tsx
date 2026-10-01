@@ -8,6 +8,8 @@ interface AvatarStackProps {
   size?: AvatarSize
   className?: string
   extraClassName?: string
+  /** Extra classes for the avatar at `index`, e.g. to hide it when the row gets narrow. */
+  itemClassName?: (index: number) => string | undefined
 }
 
 const sizes: Record<AvatarSize, { box: string; overlap: string }> = {
@@ -16,7 +18,14 @@ const sizes: Record<AvatarSize, { box: string; overlap: string }> = {
   lg: { box: 'size-10', overlap: '-space-x-3' },
 }
 
-export function AvatarStack({ avatars, extra, size = 'sm', className, extraClassName }: AvatarStackProps) {
+export function AvatarStack({
+  avatars,
+  extra,
+  size = 'sm',
+  className,
+  extraClassName,
+  itemClassName,
+}: AvatarStackProps) {
   const { box, overlap } = sizes[size]
 
   return (
@@ -26,7 +35,7 @@ export function AvatarStack({ avatars, extra, size = 'sm', className, extraClass
           key={i}
           src={src}
           alt=""
-          className={cn('rounded-full border-2 border-white object-cover', box)}
+          className={cn('rounded-full border-2 border-white object-cover', box, itemClassName?.(i))}
         />
       ))}
       {extra && (

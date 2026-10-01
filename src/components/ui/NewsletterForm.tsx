@@ -44,7 +44,7 @@ export function NewsletterForm({ className }: { className?: string }) {
           />
         </div>
         <Button type="submit" className="h-[52px] px-6 text-[18px] font-medium leading-[120%]">
-          Search
+          Subscribe
         </Button>
       </div>
 
