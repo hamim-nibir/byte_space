@@ -6,6 +6,7 @@ import { LearningPathsSection } from './components/sections/LearningPathsSection
 import { ManageSection } from './components/sections/ManageSection'
 import { GrowthSection } from './components/sections/GrowthSection'
 import { CreatorCtaSection } from './components/sections/CreatorCtaSection'
+import { TestimonialsSection } from './components/sections/TestimonialsSection'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <ManageSection />
         </div>
         <CreatorCtaSection />
+        <TestimonialsSection />
       </main>
     </>
   )
